@@ -44,7 +44,7 @@ For do the Test, you must follow the next steps:
 
 - Clone repository
 ```sh
-git clone https://github.com/mirckogalleani/de-challenge-v2.git
+git clone -b dev https://github.com/mirckogalleani/de-challenge-v2.git
 ```
 
 - Navigate the service folder and run the tests
@@ -60,7 +60,7 @@ To run this service you must have installed Java 8 in  your local computer.
 To run this service you must be located in the root folder of this repository and execute the following commands:
 
 ```sh
-git clone https://github.com/mirckogalleani/de-challenge-v2.git \
+git clone -b dev https://github.com/mirckogalleani/de-challenge-v2.git \
 cd de-challenge-v2 \
 wget https://www.apache.org/dyn/closer.lua/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz \
 cd com_walmart_reportservice \
@@ -70,7 +70,7 @@ path_where_spark_was_downloaded/bin/spark-submit --class com.walmart.App path_wh
 
 eg:
 ```sh
-git clone https://github.com/mirckogalleani/de-challenge-v2.git \
+git clone -b dev https://github.com/mirckogalleani/de-challenge-v2.git \
 cd de-challenge-v2 \
 wget https://www.apache.org/dyn/closer.lua/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz \
 cd com_walmart_reportservice \
