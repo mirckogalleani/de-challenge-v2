@@ -43,9 +43,12 @@ eg:
 For do the Test, you must follow the next steps:
 
 - Clone repository
-
 ```sh
 git clone https://github.com/mirckogalleani/de-challenge-v2.git
+```
+
+- Navigate the service folder and run the tests
+```sh
 cd de-challenge-v2/com_walmart_reportservice/
 mvn clean test
 ```
