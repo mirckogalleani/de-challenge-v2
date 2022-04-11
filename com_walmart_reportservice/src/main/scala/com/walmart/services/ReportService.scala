@@ -68,8 +68,6 @@ class ReportService() extends Serializable {
             
             val columns_points: List[String] = List("TEAM", "SEASON", "POINTS")
             
-            //val total_report = result.select("TEAM", "SEASON", "POINTS")
-
             val total_report = fileOperator.selectColumns(result, columns_points.toSeq)
 
             val shot_ratio_report = this.makeShotRatioReport(result)

@@ -63,33 +63,5 @@ class TestResponseFailure extends FlatSpec  {
         assert(actual.getMessage == message)    
     }
 
-    // test("on build system error | type returns SYSTEM_ERROR") {
-    //     //Arrange
-    //     var value = "error on adapter x"
-
-    //     //Act
-    //     var response_handler = new ResponseFailure("")
-    //     var response = response_handler.buildSystemError(value)
-
-    //     //Assert
-    //     assert(response.isValid == false)
-    //     assert(response.getType == ResponseType.SYSTEM_ERROR.toString())
-
-    // }
-
-    // test("on build arguments error get type returns ARGUMENTS_ERROR") {
-    //     //Arrange
-    //     var value = "error on argument x"
-
-    //     //Act
-    //     var response_handler = new ResponseFailure("")
-    //     var response = response_handler.buildArgumentsError(value)
-
-    //     //Assert
-    //     assert(response.isValid == false)
-    //     assert(response.getType == ResponseType.ARGUMENTS_ERROR.toString())
-
-    // }
-
 
 }

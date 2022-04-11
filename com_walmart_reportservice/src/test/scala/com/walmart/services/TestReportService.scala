@@ -96,9 +96,6 @@ class TestReportService extends FlatSpec with MockFactory{
 
         val factory = new SparkSessionFactory()
         val session = factory.makeSession(sparkMode)
-        // val df = session.emptyDataFrame
-        // val data = Array(0, 8, 0, 3, 2, 0, "Sunderland", 8.5, 4.5, 1.4, 8.5, 4.33, 1.4, 9.0, 4.6, 1.35, 39, "23", "-1.25", 2.05, 1.76, 8.37, "1.91", "1.96", 4.47, 1.4, 2.15, 1.83, 9.5, "1.96", "2.02", 4.89, 1.44, 33, "18/08/12", "E0", 0, 0, "D", "9", "4.6", "1.35", 7, 12, 0, 14, 4, 0, 0, "D", 0, "Arsenal", 7.3, 4.5, 1.35, "8", "4.5", "1.4", 8.78, 8.71, 4.72, 1.44, 4.76, 1.44, "C Foy", null, null, null, "9.5", "4.5", "1.36", 8.5, 4.75, 1.44, 8.0, 4.0, 1.44, 1213)
-        // val rdd_data = session.sparkContext.parallelize(data)
         val schema = StructType(Array(StructField("AC", LongType, true),
             StructField("AF", LongType, true),
             StructField("AR", LongType, true),
@@ -184,7 +181,6 @@ class TestReportService extends FlatSpec with MockFactory{
         val data_with_seasons = df.withColumn("SEASON", regexp_extract(input_file_name, "season-(\\d+)_json.json$", 1))
         val result = this.makeScoreReport(data_with_seasons)
 
-        //val total_report = result.select("TEAM", "SEASON", "POINTS")
         (operator.selectColumns _) expects(*, columns_points.toSeq) returning(df)
 
         val shot_ratio_report = this.makeShotRatioReport(result)

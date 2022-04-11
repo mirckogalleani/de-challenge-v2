@@ -38,22 +38,6 @@ class TestSparkSessionFactory extends FlatSpec {
         assert(actual.getMessage == expected)
     }
 
-    // test("make local creates spark session as local") {
-    //     //Arrange
-    //     val factory = new SparkSessionFactory()
-
-    //     //Act
-    //     val session = factory.makeLocal()
-
-    //     //Assert
-    //     assert(session.isInstanceOf[SparkSession])
-    //     assert(session.conf.get("spark.app.name") == "sparkLocal")
-    //     assert(session.conf.get("spark.sql.shuffle.partitions") == "1")
-
-    //     session.close()
-
-    // }
-
     ignore should "return SparkSession object when receive cluster mode" in{ 
         //Arrange
         val factory = new SparkSessionFactory()
