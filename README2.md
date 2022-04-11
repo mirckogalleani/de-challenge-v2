@@ -27,6 +27,7 @@ for this job the following assumptions were made:
 	*	3 points for winning match
 	*	1 point for drawn match
 	*	0 point for losing match
-*	The shot ratio was calculated using this formula: FTG / ST
+*	The shot ratio was calculated using this formula: SR = FTG / ST
+	*	SR = Shot Ratio
 	*	FTG = Full Time Goals
-	*	ST = Shots target
+	*	ST = Shots Target
