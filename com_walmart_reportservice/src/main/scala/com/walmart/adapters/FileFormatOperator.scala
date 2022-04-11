@@ -16,17 +16,10 @@ class FileFormatOperator(val session: SparkSession) extends Serializable {
     val dataFrameEmptyMsg = "DataFrame cannot be empty"
     val dataFrameNullMsg = "DataFrame cannot be null"
     val columnsEmptyMsg = "Columns cannot be empty"
-    val queryNullMsg = "Query cannot be null"
-    val queryEmptyMsg = "Query cannot be empty"
-    val aliasNullMsg = "Alias cannot be null"
-    val aliasEmptyMsg = "Alias cannot be empty"
-    val wordsEmptyMsg = "Words cannot be empty"
     val fileFormatNullMsg = "fileFormat cannot be null"
     val fileFormatEmptyMsg = "fileFormat cannot be empty"
     val modeNullMsg = "mode cannot be null"
     val modeEmptyMsg = "mode cannot be empty"
-    val partitionedByNullMsg = "partitionedBy cannot be null"
-    val partitionedByEmptyMsg = "partitionedBy cannot be empty"
     val headerNullMsg = "header cannot be null"
     val headerEmptyMsg = "header cannot be empty"
     //val fileFormatNotImplementedMsg = s"fileFormat: $fileFormat not Implemented"
@@ -116,14 +109,11 @@ class FileFormatOperator(val session: SparkSession) extends Serializable {
         catch{
             case x: Exception =>
             {
-                // mylog.info(x.printStackTrace.toString)
                 throw new FileFormatException(x.getMessage)
                 
             }
         }
     }
-
-
 
     def existFiles(path: String): Boolean = {
         this.validateSession 

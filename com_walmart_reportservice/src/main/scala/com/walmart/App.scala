@@ -12,15 +12,6 @@ import org.json4s.native.Serialization.read
 
 object App extends Serializable{
 
-    // private def validateResponse(response: Response): Boolean = {
-    //     if(!response.isValid){
-    //         throw new ControllerException(response.toString) 
-    //         return false
-    //     }else{
-    //         System.exit(0)
-    //     }
-    // }
-
     private def makeOperator(session: SparkSession): FileFormatOperator = {
         try{
 
@@ -57,7 +48,6 @@ object App extends Serializable{
             val sessionFactory = new SparkSessionFactory()
             val session = sessionFactory.makeSession(request.sparkMode)
             val operator: FileFormatOperator = this.makeOperator(session)
-            // @transient lazy val encryptor: Encryptor = new SpringEncryptor(request.password, request.salt)
             val service: ReportService = new ReportService(operator)
             val response: Response = service.invoke(request)
             if (response.isValid){
